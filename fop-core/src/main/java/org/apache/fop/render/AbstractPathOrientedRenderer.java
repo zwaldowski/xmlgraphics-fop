@@ -899,9 +899,10 @@ public abstract class AbstractPathOrientedRenderer extends PrintRenderer {
             }
             if (inline.hasLineThrough()) {
                 Color ct = (Color) inline.getTrait(Trait.LINETHROUGH_COLOR);
-                float y = (float)(baseline - (0.45 * capHeight));
-                drawBorderLine(startx / 1000f, (y - halfLineWidth) / 1000f,
-                        endx, (y + halfLineWidth) / 1000f,
+                float y = (float)(baseline - (0.4 * capHeight));
+                float thickLineWidth = halfLineWidth * 5.0f;
+                drawBorderLine(startx / 1000f, (y - thickLineWidth) / 1000f,
+                        endx, (y + thickLineWidth) / 1000f,
                         true, true, Constants.EN_SOLID, ct);
             }
         }
