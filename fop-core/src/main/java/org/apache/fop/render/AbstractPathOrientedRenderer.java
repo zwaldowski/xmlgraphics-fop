@@ -881,7 +881,7 @@ public abstract class AbstractPathOrientedRenderer extends PrintRenderer {
             endTextObject();
             float descender = fm.getDescender(fontsize) / 1000f;
             float capHeight = fm.getCapHeight(fontsize) / 1000f;
-            float halfLineWidth = (descender / -8f) / 2f;
+            float halfLineWidth = fm.getStrikeoutThickness(fontsize) / 1000f / 2f;
             float endx = (startx + inline.getIPD()) / 1000f;
             if (inline.hasUnderline()) {
                 Color ct = (Color) inline.getTrait(Trait.UNDERLINE_COLOR);
